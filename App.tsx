@@ -1,21 +1,12 @@
-import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'expo-status-bar';
 
-import HomeScreen from './src/HomeScreen';
-import ProfileScreen from './src/ProfileScreen';
-import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './src/navigation';
 
-const HomeStack = createNativeStackNavigator();
-
-const HomeStackNavigator = () => {
+export default function App() {
   return (
-    <NavigationContainer>
-      <HomeStack.Navigator>
-        <HomeStack.Screen name="Home" component={HomeScreen} />
-        <HomeStack.Screen name="Profile" component={ProfileScreen} />
-      </HomeStack.Navigator>
-    </NavigationContainer>
+    <>
+      <RootNavigator />
+      <StatusBar style="auto" />
+    </>
   );
-};
-
-export default HomeStackNavigator;
+}

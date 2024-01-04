@@ -1,14 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {Text,View,Button} from 'react-native';
-import { HomeScreenNavigationProp } from './types';
+import { HomeScreenNavigationProp } from './navigation/types';
 
-export default function HomeScreen(  ) {
+export default function HomeScreen() {
 
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
   const proximaTela = () => {
-    //Enviando parâmetros para outra tela
     navigation.navigate('Profile', { name: 'Pedro' });
   }
   return <View>
@@ -16,3 +15,6 @@ export default function HomeScreen(  ) {
           <Button onPress={() => proximaTela() } title="Proxima"></Button>
         </View>
 }
+
+
+/*<HomeScreenNavigationProp>*/

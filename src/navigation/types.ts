@@ -7,7 +7,6 @@ export type HomeStackNavigatorParamList = {
       name : string
     }
   }
-
 //Criamos o tipo que usaremos dentro de HomeScreen para chamar Profile
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
                                                             HomeStackNavigatorParamList,
@@ -18,3 +17,9 @@ export type ProfileScreenRouteProp = RouteProp<
                                             HomeStackNavigatorParamList,
                                             'Profile'
                                             >;
+
+export type BottomTabNavigatorParamList = {
+                                            HomeStack: HomeStackNavigatorParamList;
+                                            Feed: undefined;
+                                            Settings: undefined;
+                                          };
