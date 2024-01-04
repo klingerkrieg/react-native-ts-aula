@@ -1,5 +1,6 @@
 import { ReactElement, ReactNode, ReactPortal } from 'react';
 import {Text,View, Button, TextInput, Alert} from 'react-native';
+import { styles } from './globalStyle';
 
 type TitleProps = {
   size? : number,
@@ -11,6 +12,8 @@ type TitleProps = {
   children: ReactNode
 }
 
+
+
 export function Title2 (_props : TitleProps){
 
   //clonando um objeto
@@ -18,9 +21,9 @@ export function Title2 (_props : TitleProps){
   props.size = _props.size || 20;
   props.backgroundColor = _props.backgroundColor || 'green';
 
-  return <View><Text style={{fontSize:props.size, 
-                        textAlign:'center', 
-                        backgroundColor:props.backgroundColor}}>
+  return <View><Text style={[styles.title,
+                            {fontSize:props.size, backgroundColor:props.backgroundColor},
+                            ]}>
           {props.children}
           </Text>
           {props.hasButton && 
