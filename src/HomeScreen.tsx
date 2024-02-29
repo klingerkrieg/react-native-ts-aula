@@ -32,7 +32,7 @@ export default function HomeScreen() {
   }
 
   useEffect(() => {
-    alert(valor2);
+    console.log(valor2);
   }, [valor2])
 
 
